@@ -19,12 +19,7 @@ export default function Occasions() {
       title: "Soirées entre amis",
       description: "Jeux de culture générale, défis fun, ambiance décontractée",
       icon: "🎉",
-    },
-    {
-      title: "Événements communautaires",
-      description: "Tournois, classements, animations de groupe",
-      icon: "🤝",
-    },
+    }
   ];
 
   return (
@@ -36,7 +31,7 @@ export default function Occasions() {
         <p className="mb-16 text-center text-xl text-gray-600">
           Adapté à tous vos événements privés
         </p>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {occasions.map((occasion) => (
             <div
               key={occasion.title}
