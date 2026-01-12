@@ -24,7 +24,7 @@ export default function ContactPage() {
         console.log("Demande de contact envoyée avec succès");
       } else {
         console.error("Erreur lors de l'envoi de la demande de contact");
-      }
+      } 
     });
   };
 
