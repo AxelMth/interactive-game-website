@@ -5,7 +5,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <nav className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="text-2xl font-bold text-primary">
-          GameFlow
+          Ludiq Events
         </Link>
         <div className="flex items-center gap-6">
           <Link href="/jeux" className="text-sm font-medium hover:text-primary">

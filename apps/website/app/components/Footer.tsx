@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div>
-            <h3 className="mb-4 text-lg font-bold">GameFlow</h3>
+            <h3 className="mb-4 text-lg font-bold">Ludiq Events</h3>
             <p className="text-sm text-gray-600">
               Transformez vos événements en expériences mémorables
             </p>
@@ -58,7 +58,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t pt-8 text-center text-sm text-gray-600">
-          <p>&copy; {new Date().getFullYear()} GameFlow. Tous droits réservés.</p>
+          <p>&copy; {new Date().getFullYear()} Ludiq Events. Tous droits réservés.</p>
         </div>
       </div>
     </footer>

@@ -16,23 +16,23 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "GameFlow - Transformez vos événements en expériences mémorables",
-    template: "%s | GameFlow",
+    default: "Ludiq Events - Transformez vos événements en expériences mémorables",
+    template: "%s | Ludiq Events",
   },
   description: "Animations interactives sur mesure pour vos événements privés. Jeux en temps réel, classements dynamiques et cadeaux qui créent de la connexion entre vos invités.",
   keywords: ["jeux interactifs", "animation événement", "jeux mariage", "quiz interactif", "animation soirée"],
-  authors: [{ name: "GameFlow" }],
+  authors: [{ name: "Ludiq Events" }],
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "https://gameflow.fr",
-    siteName: "GameFlow",
-    title: "GameFlow - Transformez vos événements en expériences mémorables",
+    url: "https://ludiq-events.fr",
+    siteName: "Ludiq Events",
+    title: "Ludiq Events - Transformez vos événements en expériences mémorables",
     description: "Animations interactives sur mesure pour vos événements privés",
   },
   twitter: {
     card: "summary_large_image",
-    title: "GameFlow - Transformez vos événements en expériences mémorables",
+    title: "Ludiq Events - Transformez vos événements en expériences mémorables",
     description: "Animations interactives sur mesure pour vos événements privés",
   },
 };

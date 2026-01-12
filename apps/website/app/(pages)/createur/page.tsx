@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Le créateur",
-  description: "Découvrez qui se cache derrière GameFlow",
+  description: "Découvrez qui se cache derrière Ludiq Events",
 };
 
 export default function CreateurPage() {
@@ -16,8 +16,8 @@ export default function CreateurPage() {
             <div className="rounded-lg border bg-gray-50 p-8">
               <h2 className="mb-4 text-2xl font-semibold text-gray-900">Qui suis-je ?</h2>
               <p className="mb-4">
-                Passionné par les technologies et les expériences interactives, j'ai créé GameFlow
-                pour transformer les événements privés en moments inoubliables.
+                Développeur web, passionné de jeux de pistes, escape game, énigmes, jeux de plateaux...
+                Passionné par la création de jeux sur mesure et l&apos;animation des jeux.
               </p>
               <p>
                 Mon objectif est de créer des animations qui rassemblent, qui créent de la
@@ -28,24 +28,22 @@ export default function CreateurPage() {
             <div className="rounded-lg border bg-gray-50 p-8">
               <h2 className="mb-4 text-2xl font-semibold text-gray-900">Ma vision</h2>
               <p className="mb-4">
-                Chaque événement est unique, et chaque jeu doit l'être aussi. C'est pourquoi je
+                Chaque événement est unique, et chaque jeu doit l&apos;être aussi. C&apos;est pourquoi je
                 crée des expériences sur mesure, adaptées à votre histoire, vos invités et votre
                 ambiance.
               </p>
               <p>
-                La simplicité d'utilisation, l'expérience utilisateur et l'émotion sont au cœur de
+                La simplicité d&apos;utilisation, l&apos;expérience utilisateur et l&apos;émotion sont au cœur de
                 chaque création.
               </p>
             </div>
 
             <div className="rounded-lg border bg-gray-50 p-8">
-              <h2 className="mb-4 text-2xl font-semibold text-gray-900">Pourquoi GameFlow ?</h2>
-              <ul className="list-disc list-inside space-y-2">
-                <li>Des jeux personnalisés créés spécialement pour votre événement</li>
-                <li>Une interface simple et intuitive pour tous vos invités</li>
-                <li>Un accompagnement de A à Z pour garantir le succès de votre animation</li>
-                <li>Une approche humaine et bienveillante</li>
-              </ul>
+              <h2 className="mb-4 text-2xl font-semibold text-gray-900">Ma passion</h2>
+              <p className="mb-4">
+                Ma passion pour les jeux sur mesure et l&apos;animation me pousse à créer des expériences uniques 
+                qui rassemblent les gens et créent des souvenirs mémorables.
+              </p>
             </div>
 
             <div className="mt-12 rounded-lg bg-primary/10 p-8 text-center">
@@ -53,7 +51,7 @@ export default function CreateurPage() {
                 Discutons de votre événement
               </h2>
               <p className="mb-6 text-gray-700">
-                Je serais ravi d'échanger avec vous pour créer une expérience unique et mémorable.
+                Je serais ravi d&apos;échanger avec vous pour créer une expérience unique et mémorable.
               </p>
               <a
                 href="/contact"

@@ -1,9 +1,9 @@
 # Stratégie & Positionnement
 
 ## Nom du projet
-**GameFlow** (ou **PlayTogether**)
+**Ludiq Events**
 
-Nom neutre, évolutif, qui évoque le flux de jeu et l'interaction. Facilement extensible B2B.
+Nom neutre, évolutif, qui évoque le jeu (ludique) et les événements. Facilement extensible B2B.
 
 ## Slogan
 *"Transformez vos événements en expériences mémorables"*

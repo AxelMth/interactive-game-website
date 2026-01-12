@@ -1,10 +1,10 @@
-# GameFlow - Site Vitrine
+# Ludiq Events - Site Vitrine
 
 Site vitrine pour les jeux interactifs événementiels.
 
 ## 🎯 Vision Produit
 
-**GameFlow** transforme vos événements privés en expériences mémorables grâce à des animations interactives sur mesure.
+**Ludiq Events** transforme vos événements privés en expériences mémorables grâce à des animations interactives sur mesure.
 
 ### Proposition de valeur
 Animations interactives sur mesure pour vos événements privés. Jeux en temps réel, classements dynamiques et cadeaux qui créent de la connexion entre vos invités.
@@ -26,7 +26,6 @@ interactive-game-website/
 - **Framework SSR** : Next.js 16 (App Router)
 - **Styling** : Tailwind CSS v4
 - **TypeScript** : Typage fort
-- **Monorepo** : Turborepo
 - **CMS** : Markdown (léger, évolutif)
 
 ## 🚀 Démarrage

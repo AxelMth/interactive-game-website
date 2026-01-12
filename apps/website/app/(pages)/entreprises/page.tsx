@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Entreprises",
@@ -6,73 +7,68 @@ export const metadata: Metadata = {
 };
 
 export default function EntreprisesPage() {
+  const packages = [
+    {
+      title: "Team Building",
+      description:
+        "Renforcez la cohésion de vos équipes avec des activités interactives sur mesure. Créez des moments de collaboration, de compétition amicale et de partage.",
+      image: "/images/team-building.jpg", // Placeholder for image
+      features: [
+        "Jeux collaboratifs personnalisés",
+        "Activités adaptées à vos objectifs",
+        "Classements par équipes",
+        "Renforcement de la cohésion d'équipe",
+      ],
+    },
+    {
+      title: "Séminaires",
+      description:
+        "Animez vos séminaires avec des jeux interactifs qui engagent vos participants. Rendez vos présentations mémorables et interactives.",
+      image: "/images/seminaires.jpg", // Placeholder for image
+      features: [
+        "Animations interactives pour vos séminaires",
+        "Engagement des participants",
+        "Jeux sur mesure adaptés à votre contenu",
+        "Création de moments mémorables",
+      ],
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-16">
         <div className="mx-auto max-w-4xl">
           <h1 className="mb-4 text-5xl font-bold text-gray-900">Pour les entreprises</h1>
           <p className="mb-12 text-xl text-gray-600">
-            Des solutions interactives adaptées à vos événements professionnels
+            Des solutions interactives sur mesure pour vos événements professionnels
           </p>
 
-          <div className="mb-12 rounded-lg border-2 border-primary/20 bg-primary/5 p-8">
-            <p className="text-center text-lg text-gray-700">
-              <strong>Cette section est en préparation.</strong> Nous développons actuellement des
-              solutions spécifiques pour les entreprises. N'hésitez pas à nous contacter pour en
-              savoir plus.
-            </p>
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-2">
-            <div className="rounded-lg border bg-gray-50 p-6">
-              <h2 className="mb-4 text-2xl font-semibold text-gray-900">Team Building</h2>
-              <p className="mb-4 text-gray-700">
-                Renforcez la cohésion de vos équipes avec des jeux collaboratifs et des défis
-                interactifs.
-              </p>
-              <ul className="list-disc list-inside space-y-1 text-gray-600">
-                <li>Jeux collaboratifs</li>
-                <li>Classements par équipes</li>
-                <li>Défis de groupe</li>
-              </ul>
-            </div>
-
-            <div className="rounded-lg border bg-gray-50 p-6">
-              <h2 className="mb-4 text-2xl font-semibold text-gray-900">Séminaires & Formations</h2>
-              <p className="mb-4 text-gray-700">
-                Rendez vos formations interactives avec des quiz produits, des évaluations en direct
-                et de la gamification pédagogique.
-              </p>
-              <ul className="list-disc list-inside space-y-1 text-gray-600">
-                <li>Quiz produits</li>
-                <li>Formations interactives</li>
-                <li>Évaluations en direct</li>
-              </ul>
-            </div>
-
-            <div className="rounded-lg border bg-gray-50 p-6">
-              <h2 className="mb-4 text-2xl font-semibold text-gray-900">Événements Clients</h2>
-              <p className="mb-4 text-gray-700">
-                Engagez votre public avec des animations personnalisées et un branding adapté à
-                votre marque.
-              </p>
-              <ul className="list-disc list-inside space-y-1 text-gray-600">
-                <li>Branding personnalisé</li>
-                <li>Jeux de marque</li>
-                <li>Engagement public</li>
-              </ul>
-            </div>
-
-            <div className="rounded-lg border bg-gray-50 p-6">
-              <h2 className="mb-4 text-2xl font-semibold text-gray-900">Fonctionnalités B2B</h2>
-              <p className="mb-4 text-gray-700">
-                Des outils adaptés aux besoins professionnels avec analytics et export de données.
-              </p>
-              <ul className="list-disc list-inside space-y-1 text-gray-600">
-                <li>Export des résultats</li>
-                <li>Analytics détaillés</li>
-                <li>Rapports de participation</li>
-              </ul>
+          <div className="mb-16">
+            <h2 className="mb-8 text-3xl font-semibold text-gray-900">Nos packages</h2>
+            <div className="space-y-12">
+              {packages.map((pkg, index) => (
+                <div key={index} className="rounded-lg border bg-gray-50 p-8">
+                  <div className="mb-6 aspect-video w-full overflow-hidden rounded-lg bg-gray-200">
+                    <Image 
+                      src={pkg.image as string}
+                      width={1000}
+                      height={1000}
+                      alt={pkg.title}
+                      className="h-full w-full object-cover"
+                    />
+                    <div className="flex h-full items-center justify-center text-gray-400">
+                      <span className="text-sm">Image illustrative: {pkg.title}</span>
+                    </div>
+                  </div>
+                  <h3 className="mb-4 text-2xl font-semibold text-gray-900">{pkg.title}</h3>
+                  <p className="mb-4 text-lg text-gray-700">{pkg.description}</p>
+                  <ul className="list-disc list-inside space-y-2 text-gray-600">
+                    {pkg.features.map((feature, i) => (
+                      <li key={i}>{feature}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
 

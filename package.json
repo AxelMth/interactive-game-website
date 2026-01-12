@@ -2,18 +2,11 @@
   "name": "interactive-game-website",
   "version": "0.1.0",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
-    "dev": "turbo run dev",
-    "build": "turbo run build",
-    "start": "turbo run start",
-    "lint": "turbo run lint"
-  },
-  "devDependencies": {
-    "turbo": "^1.10.0"
+    "dev": "cd apps/website && npm run dev",
+    "build": "cd apps/website && npm run build",
+    "start": "cd apps/website && npm run start",
+    "lint": "cd apps/website && npm run lint"
   },
   "engines": {
     "node": ">=18.0.0"

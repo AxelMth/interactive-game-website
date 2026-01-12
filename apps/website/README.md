@@ -1,4 +1,4 @@
-# Site Vitrine GameFlow
+# Site Vitrine Ludiq Events
 
 Site vitrine Next.js pour présenter les jeux interactifs événementiels.
 
