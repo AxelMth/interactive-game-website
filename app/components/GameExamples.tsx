@@ -6,19 +6,14 @@ export default function GameExamples() {
       icon: "❓",
     },
     {
-      title: "Classement d'images",
-      description: "Vos invités classent des photos selon différents critères (plus belle, plus drôle...).",
-      icon: "📸",
+      title: "Jeu de piste",
+      description: "Vos invités doivent trouver un objet caché en résolvant des énigmes et des défis.",
+      icon: "🧭",
     },
     {
-      title: "Mise en ordre",
-      description: "Reconstituer une chronologie, un ordre logique ou une séquence d'événements.",
-      icon: "🔢",
-    },
-    {
-      title: "Questions ouvertes",
-      description: "Collectez des anecdotes, des souvenirs ou des messages personnalisés.",
-      icon: "💬",
+      title: "Dégustation à l'aveugle",
+      description: "Vos invités dégustent des produits en les identifiant par leur goût.",
+      icon: "👃",
     },
   ];
 
@@ -29,9 +24,9 @@ export default function GameExamples() {
           Exemples de jeux
         </h2>
         <p className="mb-16 text-center text-xl text-gray-600">
-          Des formats variés pour s'adapter à tous vos événements
+          Des formats variés pour s&apos;adapter à tous vos événements
         </p>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {games.map((game) => (
             <div
               key={game.title}
