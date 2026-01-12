@@ -6,13 +6,13 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div>
-            <h3 className="mb-4 text-lg font-bold">Ludiq Events</h3>
+            <h3 className="mb-4 text-lg font-bold text-gray-900">Ludiq Events</h3>
             <p className="text-sm text-gray-600">
               Transformez vos événements en expériences mémorables
             </p>
           </div>
           <div>
-            <h4 className="mb-4 font-semibold">Navigation</h4>
+            <h4 className="mb-4 font-semibold text-gray-900">Navigation</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/jeux" className="text-gray-600 hover:text-primary">
@@ -32,7 +32,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="mb-4 font-semibold">Légal</h4>
+            <h4 className="mb-4 font-semibold text-gray-900">Légal</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/mentions-legales" className="text-gray-600 hover:text-primary">
@@ -47,7 +47,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="mb-4 font-semibold">Contact</h4>
+            <h4 className="mb-4 font-semibold text-gray-900Les">Contact</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/contact" className="text-gray-600 hover:text-primary">

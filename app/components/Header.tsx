@@ -8,13 +8,13 @@ export default function Header() {
           Ludiq Events
         </Link>
         <div className="flex items-center gap-6">
-          <Link href="/jeux" className="text-sm font-medium hover:text-primary">
+          <Link href="/jeux" className="text-sm font-medium hover:text-primary text-gray-600">
             Les jeux
           </Link>
-          <Link href="/createur" className="text-sm font-medium hover:text-primary">
+          <Link href="/createur" className="text-sm font-medium hover:text-primary text-gray-600">
             Le créateur
           </Link>
-          <Link href="/entreprises" className="text-sm font-medium hover:text-primary">
+          <Link href="/entreprises" className="text-sm font-medium hover:text-primary text-gray-600">
             Entreprises
           </Link>
           <Link
