@@ -12,13 +12,13 @@ export default function HowItWorks() {
     },
     {
       number: "3",
-      title: "Vos invités jouent",
-      description: "Le jour J, vos invités se connectent via leur smartphone et jouent en temps réel.",
+      title: "Nous animons votre événement",
+      description: "Nous animons votre événement avec notre jeu personnalisé.",
     },
     {
       number: "4",
-      title: "Moment magique",
-      description: "Classements dynamiques, roue des cadeaux, et souvenirs inoubliables pour tous !",
+      title: "Nous vous envoyons les résultats",
+      description: "Nous vous envoyons les résultats de l'événement par email.",
     },
   ];
 
@@ -30,7 +30,7 @@ export default function HowItWorks() {
         </h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {steps.map((step) => (
-            <div key={step.number} className="text-center">
+            <div key={step.number} className="text-center rounded-lg p-8">
               <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary text-2xl font-bold text-white">
                 {step.number}
               </div>
