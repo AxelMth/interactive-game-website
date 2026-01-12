@@ -8,6 +8,7 @@ type GameFormat = {
   title: string;
   description: string;
   icon: string;
+  image: string;
   features: string[];
 };
 
@@ -21,6 +22,7 @@ export default function GameExamples() {
       description:
         "Personnes ou groupes jouent et répondent avec un téléphone. Classement en direct, différentes activités. Plus pratique pour les jeunes.",
       icon: "📱",
+      image: "https://media.istockphoto.com/id/1327459161/fr/photo/trois-fans-de-football-assis-sur-un-canap%C3%A9-regardent-un-match-%C3%A0-la-t%C3%A9l%C3%A9vision-utilisent.jpg?s=2048x2048&w=is&k=20&c=-IZHMwKxoNefi5TUWhcHdCXC-6j4jT9r6HxxWsSEgCs=",
       features: [
         "Parfait pour les familles ou les groupes d'amis",
         "Classement en direct pour déterminer le vainqueur",
@@ -34,6 +36,7 @@ export default function GameExamples() {
       description:
         "Permet de s'amuser en groupe et de se détendre.",
       icon: "🤝",
+      image: "https://media.istockphoto.com/id/1327459161/fr/photo/trois-fans-de-football-assis-sur-un-canap%C3%A9-regardent-un-match-%C3%A0-la-t%C3%A9l%C3%A9vision-utilisent.jpg?s=2048x2048&w=is&k=20&c=-IZHMwKxoNefi5TUWhcHdCXC-6j4jT9r6HxxWsSEgCs=",
       features: [
         "Parfait en famille",
         "Activités personnalisées",
@@ -46,6 +49,7 @@ export default function GameExamples() {
       description:
         "Aller d'un point à un autre dans un périmètre défini. Parcours guidé avec énigmes et défis à résoudre.",
       icon: "🧭",
+      image: "https://media.istockphoto.com/id/1327459161/fr/photo/trois-fans-de-football-assis-sur-un-canap%C3%A9-regardent-un-match-%C3%A0-la-t%C3%A9l%C3%A9vision-utilisent.jpg?s=2048x2048&w=is&k=20&c=-IZHMwKxoNefi5TUWhcHdCXC-6j4jT9r6HxxWsSEgCs=",
       features: [
         "Portif et plus ludique pour les enfants",
         "Énigmes à résoudre pour les adultes",
@@ -90,14 +94,22 @@ export default function GameExamples() {
             <div
               key={format.id}
               onClick={() => handleCardClick(format.id)}
-              className="cursor-pointer rounded-lg border bg-white p-6 shadow-sm transition-all hover:shadow-lg hover:scale-105"
+              className="cursor-pointer rounded-lg border bg-white overflow-hidden shadow-sm transition-all hover:shadow-lg hover:scale-105"
             >
-              <div className="mb-4 text-4xl">{format.icon}</div>
-              <h3 className="mb-2 text-xl font-semibold text-gray-900">{format.title}</h3>
-              <p className="text-gray-600">{format.description}</p>
-              <button className="mt-4 text-primary font-semibold hover:underline">
-                En savoir plus →
-              </button>
+              <img 
+                src={format.image as string} 
+                alt={format.title} 
+                width={1000} 
+                height={1000} 
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="mb-2 text-xl font-semibold text-gray-900">{format.title}</h3>
+                <p className="text-gray-600">{format.description}</p>
+                <button className="mt-4 text-primary font-semibold hover:underline">
+                  En savoir plus →
+                </button>
+              </div>
             </div>
           ))}
         </div>

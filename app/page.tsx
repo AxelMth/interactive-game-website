@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <HowItWorks />
       <GameExamples />
+      <HowItWorks />
       <Occasions />
       <Testimonials />
       <CTA />
