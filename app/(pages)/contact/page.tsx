@@ -1,11 +1,61 @@
-import type { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description: "Demandez une animation pour votre événement",
-};
+import { useState } from "react";
 
 export default function ContactPage() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [eventType, setEventType] = useState("");
+  const [date, setDate] = useState("");
+  const [guests, setGuests] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, email, phone, eventType, date, guests, message }),
+    }).then((res) => {
+      if (res.ok) {
+        console.log("Demande de contact envoyée avec succès");
+      } else {
+        console.error("Erreur lors de l'envoi de la demande de contact");
+      }
+    });
+  };
+
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setName(e.target.value);
+  };
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPhone(e.target.value);
+  };
+
+  const handleEventTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setEventType(e.target.value);
+  };
+
+  const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setDate(e.target.value);
+  };
+
+  const handleGuestsChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setGuests(e.target.value);
+  };
+
+  const handleMessageChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setMessage(e.target.value);
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-16">
@@ -16,7 +66,7 @@ export default function ContactPage() {
             de votre événement.
           </p>
 
-          <form className="space-y-6 rounded-lg border bg-gray-50 p-8">
+          <form className="space-y-6 rounded-lg border bg-gray-50 p-8" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="name" className="mb-2 block font-semibold text-gray-900">
                 Nom *
@@ -26,7 +76,9 @@ export default function ContactPage() {
                 id="name"
                 name="name"
                 required
-                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                value={name}
+                onChange={handleNameChange}
+                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900"
               />
             </div>
 
@@ -38,8 +90,10 @@ export default function ContactPage() {
                 type="email"
                 id="email"
                 name="email"
+                value={email}
+                onChange={handleEmailChange}
                 required
-                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900"
               />
             </div>
 
@@ -51,19 +105,23 @@ export default function ContactPage() {
                 type="tel"
                 id="phone"
                 name="phone"
-                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                value={phone}
+                onChange={handlePhoneChange}
+                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900"
               />
             </div>
 
             <div>
               <label htmlFor="event-type" className="mb-2 block font-semibold text-gray-900">
-                Type d'événement *
+                Type d&apos;événement *
               </label>
               <select
                 id="event-type"
                 name="event-type"
                 required
-                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                value={eventType}
+                onChange={handleEventTypeChange}
+                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900"
               >
                 <option value="">Sélectionnez un type</option>
                 <option value="mariage">Mariage</option>
@@ -77,26 +135,30 @@ export default function ContactPage() {
 
             <div>
               <label htmlFor="date" className="mb-2 block font-semibold text-gray-900">
-                Date de l'événement
+                Date de l&apos;événement
               </label>
               <input
                 type="date"
                 id="date"
                 name="date"
-                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900"
+                value={date}
+                onChange={handleDateChange}
               />
             </div>
 
             <div>
               <label htmlFor="guests" className="mb-2 block font-semibold text-gray-900">
-                Nombre d'invités (approximatif)
+                Nombre d&apos;invités (approximatif)
               </label>
               <input
                 type="number"
                 id="guests"
                 name="guests"
                 min="1"
-                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900"
+                value={guests}
+                onChange={handleGuestsChange}
               />
             </div>
 
@@ -110,7 +172,9 @@ export default function ContactPage() {
                 rows={6}
                 required
                 placeholder="Décrivez votre événement, vos attentes, vos questions..."
-                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900"
+                value={message}
+                onChange={handleMessageChange}
               />
             </div>
 
