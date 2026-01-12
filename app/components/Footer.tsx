@@ -47,7 +47,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="mb-4 font-semibold text-gray-900Les">Contact</h4>
+            <h4 className="mb-4 font-semibold text-gray-900">Contact</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/contact" className="text-gray-600 hover:text-primary">

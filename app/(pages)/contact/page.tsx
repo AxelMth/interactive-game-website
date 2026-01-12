@@ -1,8 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 
 export default function ContactPage() {
+  const searchParams = useSearchParams();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -10,6 +12,14 @@ export default function ContactPage() {
   const [date, setDate] = useState("");
   const [guests, setGuests] = useState("");
   const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    const format = searchParams.get("format");
+    if (format) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setMessage(`Je suis intéressé(e) par le format "${format}".\n\nPourriez-vous me fournir plus d'informations et un devis personnalisé ?\n\nInformations complémentaires :\n- Lieu de l'événement : \n- Nombre d'invités : \n- Date prévue : \n- Autres détails : `);
+    }
+  }, [searchParams]);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

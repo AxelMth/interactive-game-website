@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Testimonials() {
   // TODO: Remplacer par les données réelles depuis la base de données
   const testimonials = [
@@ -16,7 +18,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="mb-16 text-center text-4xl font-bold text-gray-900">
           Témoignages
@@ -29,8 +31,10 @@ export default function Testimonials() {
             >
               <div className="mb-4 flex items-center gap-4">
                 {testimonial.photo ? (
-                  <img
-                    src={testimonial.photo}
+                  <Image
+                    src={testimonial.photo as string}
+                    width={1000}
+                    height={1000}
                     alt={testimonial.name}
                     className="h-16 w-16 rounded-full object-cover"
                   />
@@ -44,7 +48,7 @@ export default function Testimonials() {
                   <p className="text-sm text-gray-600">{testimonial.event}</p>
                 </div>
               </div>
-              <p className="text-gray-700 italic">"{testimonial.message}"</p>
+              <p className="text-gray-700 italic">&quot;{testimonial.message}&quot;</p>
             </div>
           ))}
         </div>
