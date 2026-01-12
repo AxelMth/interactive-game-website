@@ -1,14 +1,29 @@
 {
-  "name": "interactive-game-website",
+  "name": "Ludiq Events Website",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
-    "dev": "cd apps/website && npm run dev",
-    "build": "cd apps/website && npm run build",
-    "start": "cd apps/website && npm run start",
-    "lint": "cd apps/website && npm run lint"
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "lint": "eslint"
   },
-  "engines": {
-    "node": ">=18.0.0"
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "next": "16.1.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
