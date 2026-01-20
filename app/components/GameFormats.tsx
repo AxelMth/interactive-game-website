@@ -12,7 +12,7 @@ type GameFormat = {
   features: string[];
 };
 
-export default function GameExamples() {
+export default function GameFormats() {
   const [selectedFormat, setSelectedFormat] = useState<string | null>(null);
 
   const formats: GameFormat[] = [
@@ -51,7 +51,7 @@ export default function GameExamples() {
       icon: "🧭",
       image: "https://media.istockphoto.com/id/1327459161/fr/photo/trois-fans-de-football-assis-sur-un-canap%C3%A9-regardent-un-match-%C3%A0-la-t%C3%A9l%C3%A9vision-utilisent.jpg?s=2048x2048&w=is&k=20&c=-IZHMwKxoNefi5TUWhcHdCXC-6j4jT9r6HxxWsSEgCs=",
       features: [
-        "Portif et plus ludique pour les enfants",
+        "Portatif et plus ludique pour les enfants",
         "Énigmes à résoudre pour les adultes",
         "Guidage tout au long du parcours",
         "Adaptable à votre lieu d'événement",
@@ -114,7 +114,7 @@ export default function GameExamples() {
           ))}
         </div>
 
-        {/* Modal/Overlay for selected format */}
+        {/* Modal/Overlay pour le format sélectionné */}
         {selectedFormat && (
           <div
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
